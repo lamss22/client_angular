@@ -1,0 +1,32 @@
+<h1>List staff</h1>
+
+<br>
+<a class="btn btn-primary" routerLink="/add" role="button">Add new staff</a>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>birthday</th>
+            <th>salary</th>
+            <th>email</th>
+            <th>gender</th>
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let s of staff">
+            <td>{{s.id}}</td>
+            <td>{{s.name}}</td>
+            <td>{{s.birthday}}</td>
+            <td>{{s.salary}}</td>
+            <td>{{s.email}}</td>
+            <td>{{s.gender ==1 ? "Nam" : "Nu"}}</td>
+            <td>
+                <a routerLink="/update/{{s.id}}" class="btn btn-success">Edit</a>
+                <a  class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>

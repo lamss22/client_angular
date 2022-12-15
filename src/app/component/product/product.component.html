@@ -1,0 +1,30 @@
+<h1>List product</h1>
+
+<br>
+<a class="btn btn-primary" routerLink="/add" role="button">Add new product</a>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Note</th>
+            <th>#</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let pro of product">
+            <td>{{pro.productId}}</td>
+            <td>{{pro.productName}}</td>
+            <td>{{pro.categoryId}}</td>
+            <td>{{pro.price}}</td>
+            <td>{{pro.note}}</td>
+            <td>
+                <a routerLink="/update/{{pro.productId}}" class="btn btn-success">Edit</a>
+                <a routerLink="/delete/{{pro.productId}}" class="btn btn-danger">Delete</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
