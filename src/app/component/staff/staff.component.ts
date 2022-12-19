@@ -24,6 +24,6 @@ export class StaffComponent implements OnInit{
       console.log(result);
       
     })
-    window.location.reload();
+    window.location.href= "";
    }
 }
