@@ -25,7 +25,7 @@
             <td>{{s.gender ==1 ? "Nam" : "Nu"}}</td>
             <td>
                 <a routerLink="/update/{{s.id}}" class="btn btn-success">Edit</a>
-                <a  class="btn btn-danger">Delete</a>
+                <a href="#"(click)="onDelete(s.id)" onclick="return confirm('Ban co chac muon xoa ko?')" class="btn btn-danger">Delete</a>
             </td>
         </tr>
     </tbody>

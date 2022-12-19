@@ -7,7 +7,7 @@ import { AppComponent } from './app.component';
 import { ProductComponent } from './component/product/product.component';
 import { InsertComponent } from './component/insert/insert.component';
 import { UpdateComponent } from './component/update/update.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { StaffComponent } from './component/staff/staff.component';
 
 @NgModule({
@@ -22,7 +22,8 @@ import { StaffComponent } from './component/staff/staff.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

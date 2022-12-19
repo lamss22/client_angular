@@ -18,4 +18,12 @@ export class StaffComponent implements OnInit{
       
      })
    }
+
+   onDelete(id:number) {
+    this.staffService.deleteStaff(id).subscribe(result => {
+      console.log(result);
+      
+    })
+    window.location.reload();
+   }
 }

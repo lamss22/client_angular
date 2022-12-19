@@ -25,4 +25,8 @@ export class StaffService {
   deleteStaff(id:number):Observable<any>{
     return this.http.delete<any>("http://localhost:58852/api/staff/delete/"+id);
   }
+
+  getStaffById(id:number):Observable<any>{
+    return this.http.get<any>("http://localhost:58852/api/staff/"+id);
+  }
 }
